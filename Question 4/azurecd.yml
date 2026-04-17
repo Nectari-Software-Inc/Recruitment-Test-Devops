@@ -22,7 +22,7 @@ stages:
 
     - script: |
         echo "Logging into GHCR"
-        echo $(GHCR_PAT) | docker login ghcr.io -u $(GHCR_USERNAME) --password-stdin --config C:\temp-docker-config
+        echo $(GHCR_PAT) | docker login ghcr.io -u $(GHCR_USERNAME) --password-stdin
       displayName: Docker Login
 
     - script: |
