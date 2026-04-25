@@ -1,0 +1,46 @@
+steps:
+- task: Bash@3
+  displayName: Checkout repository
+  # recupere le dockerFile et le context
+
+  # https://learn.microsoft.com/en-us/azure/devops/pipelines/tasks/reference/docker-v2?view=azure-pipelines&tabs=yaml
+- task: Docker@2
+  displayName: Login container registry
+  inputs:
+    command: login
+    containerRegistry: githubServiceConnection
+    # Login fait avec un service connection fait au préalable dans l'infrastructure Azure. 
+    # Le service connection contient un PAT github afin de diriger le 
+
+
+
+- task: Docker@2
+  displayName: Build and push Docker image
+  inputs:
+    command: 'buildAndPush'
+
+
+
+
+
+
+
+---
+name: Create and Publish
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build-and-push-image:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: ##To fill##
+
+      - name: Log in to the Container registry
+        uses: ##To fill##
+
+      - name: Build and push Docker image
+        uses: ##To fill##
