@@ -37,6 +37,7 @@ jobs:
           ls -al
           pwd
           whoami
+          cat /Question 3/Dockerfile
 
       - name: Build and push Docker image
         id: build-and-push
