@@ -44,5 +44,5 @@ jobs:
         with:
           context: ./Question 3/
           push: true
-          tags: ghcr.io/lbrassared/Recruitment-Test-Devops/mssql:2019-latest
+          tags: mssql:2019-latest
           labels: Nectari
