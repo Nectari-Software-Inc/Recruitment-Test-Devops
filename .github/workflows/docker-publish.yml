@@ -31,6 +31,12 @@ jobs:
           registry: ${{ env.REGISTRY }}
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: check whats up
+        run: |
+          ls -al
+          pwd
+          whoami
 
       - name: Build and push Docker image
         id: build-and-push
