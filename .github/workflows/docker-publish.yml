@@ -44,5 +44,5 @@ jobs:
         with:
           context: ./Question 3/
           push: true
-          tags: ${{ github.repository }}/mssql:2019-latest
+          tags: ${{ env.REGISTRY }}/mssql:2019-latest
           labels: Nectari
